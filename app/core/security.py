@@ -37,8 +37,8 @@ def verify_token(token:str,credentials_exception):
         token_data=TokenData(id=id,email=email)
         return token_data
 
-    except JWTError as e:
-        return e
+    except JWTError:
+        raise credentials_exception
 
 def get_user(token:str=Depends(oauth_scheme)):
     credentials_exception=HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,detail=f"user is not authorised to perform this action")
