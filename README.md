@@ -63,10 +63,7 @@ LedgerFlow/
 │       ├── user.py
 │       └── wallet.py
 └── scratch/                      # E2E Test Scripts
-    ├── verify_chapter03.py
-    ├── verify_chapter04.py
-    ├── verify_chapter05.py
-    └── verify_fixes.py
+    └── verify_all.py             # Consolidated Chapter 01-05 verification script
 ```
 
 ## Database Design
